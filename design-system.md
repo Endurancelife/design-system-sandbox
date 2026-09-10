@@ -101,6 +101,29 @@ A fuller spacing scale (specific values for gaps, padding, section spacing) is n
 ## 3. Component Patterns
 
 > For each component: what it's for, when to use it, and a real code example using the tokens above. Add new components here as they're built.
+### Page Heading
+
+**Use for:** the text-focused header of a hero section — pre-heading label, title, description, and action buttons.
+
+​```html
+<div class="page-heading">
+  <span class="page-heading__tagline">New — sandbox live</span>
+  <h1 class="page-heading__title">Design system test</h1>
+  <p class="page-heading__body">Supporting description text goes here.</p>
+  <div class="page-heading__actions">
+    <button class="btn btn--primary">Get started</button>
+    <button class="btn btn--secondary">Learn more</button>
+  </div>
+</div>
+​```
+
+​```css
+.page-heading { max-width: 48rem; display: flex; flex-direction: column; gap: calc(var(--spacing) * 3); }
+.page-heading__tagline { display: inline-flex; align-items: center; width: fit-content; padding: calc(var(--spacing) * 1) calc(var(--spacing) * 3); background: var(--secondary); color: var(--secondary-foreground); border-radius: 999px; font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 500; }
+.page-heading__title { font-family: var(--font-sans); font-size: 2.75rem; font-weight: 500; letter-spacing: var(--tracking-normal); line-height: 1.1; color: var(--foreground); margin: 0; }
+.page-heading__body { max-width: 36rem; font-family: var(--font-sans); font-size: 1.125rem; color: var(--muted-foreground); margin: 0; }
+.page-heading__actions { display: flex; gap: calc(var(--spacing) * 1.5); margin-top: calc(var(--spacing) * 2); }
+​```
 
 ### Button
 
