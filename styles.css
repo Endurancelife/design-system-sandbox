@@ -24,6 +24,52 @@
   --shadow-lg: 0px 4px 10px 0px hsl(0 0% 0% / 0.10), 0px 4px 6px -1px hsl(0 0% 0% / 0.10);
 }
 
+/* --- Page heading block --- */
+
+.page-heading {
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 3);
+}
+
+.page-heading__tagline {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: calc(var(--spacing) * 1) calc(var(--spacing) * 3);
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.page-heading__title {
+  font-family: var(--font-sans);
+  font-size: 2.75rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-normal);
+  line-height: 1.1;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.page-heading__body {
+  max-width: 36rem;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.page-heading__actions {
+  display: flex;
+  gap: calc(var(--spacing) * 1.5);
+  margin-top: calc(var(--spacing) * 2);
+}
+
 .dark {
   --background: oklch(0.1448 0 0);
   --foreground: oklch(1.0000 0 0);
