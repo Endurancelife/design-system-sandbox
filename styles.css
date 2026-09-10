@@ -47,3 +47,42 @@ body {
   margin: 0;
   padding: 2rem;
 }
+
+/* --- Component classes (mirrors design-system.md exactly) --- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 6);
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.btn--primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.btn--primary:hover { opacity: 0.85; }
+.btn--secondary {
+  background: transparent;
+  color: var(--foreground);
+  border-color: var(--border);
+}
+
+.card {
+  background: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  max-width: 300px;
+}
+.card__body { padding: calc(var(--spacing) * 4); }
+.card__title { font-size: 1.125rem; font-weight: 500; margin-bottom: calc(var(--spacing) * 2); font-family: var(--font-sans); }
+.card__description { color: var(--muted-foreground); font-size: 0.875rem; font-family: var(--font-sans); }
