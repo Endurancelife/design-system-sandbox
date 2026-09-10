@@ -3,10 +3,19 @@
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background: var(--background); color: var(--foreground); font-family: var(--font-sans); padding: 2rem;">
-  <h1 style="color: var(--primary);">Design system test</h1>
-  <button style="background: var(--primary); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: var(--radius);">
-    Primary button
-  </button>
+<body>
+  <h1 style="font-family: var(--font-sans); color: var(--foreground);">Design system test</h1>
+
+  <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+    <button class="btn btn--primary">Primary action</button>
+    <button class="btn btn--secondary">Secondary action</button>
+  </div>
+
+  <div class="card">
+    <div class="card__body">
+      <h3 class="card__title">Card title</h3>
+      <p class="card__description">This card is using the exact CSS documented in design-system.md.</p>
+    </div>
+  </div>
 </body>
 </html>
